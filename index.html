@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Random Password Generator</h1>
+        <p>Number of characters:</p>
+        <input type="number" id="password-length" value="12" min="4" max="32">
+        <p>Include:</p>
+        <label class="checkbox">Uppercase letters
+            <input type="checkbox" id="include-uppercase" checked>
+            <span class="checkmark"></span>
+        </label>
+        <label class="checkbox">Lowercase letters
+            <input type="checkbox" id="include-lowercase" checked>
+            <span class="checkmark"></span>
+        </label>
+        <label class="checkbox">Numbers
+            <input type="checkbox" id="include-numbers" checked>
+            <span class="checkmark"></span>
+        </label>
+        <label class="checkbox">Special characters
+            <input type="checkbox" id="include-special" checked>
+            <span class="checkmark"></span>
+        </label>
+        <button class="generate-btn" onclick="generatePassword()">Generate Password</button>
+        <textarea class="generated-password" id="generated-password" readonly></textarea>
+        <button class="copy-btn" id="clear-btn" onclick="copyPassword()">Copy to Clipboard</button>
+        <button type="button" id="clear-btn" onclick="clearPassword()">Clear</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
